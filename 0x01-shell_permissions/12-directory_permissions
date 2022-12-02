@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir my_dir; chmod a+rwx,g-w,o-rw my_dir
+mkdir -m=751 my_dir
