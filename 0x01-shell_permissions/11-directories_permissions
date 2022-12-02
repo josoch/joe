@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R a+rwx,g-w,o-w dir
+chmod -R 711 dir
