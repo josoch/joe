@@ -1,2 +1,2 @@
 #!/bin/bash
-chown ln -s vincent:staff _hello
+chown -h www-data _hello
