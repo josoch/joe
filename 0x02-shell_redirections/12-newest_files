@@ -1,2 +1,2 @@
 #!/bin/bash
-ls . Artls | tail -1
+find /sample_directory -type f -printf "%t - %p\n" | sort -n | tail -10
