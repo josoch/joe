@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Modify /etc/hosts to set the IP address for localhost to 127.0.0.2
 sudo sed -i 's/^127\.0\.0\.1/127.0.0.2/g' /etc/hosts
