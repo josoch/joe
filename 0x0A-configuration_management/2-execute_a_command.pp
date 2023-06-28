@@ -1,7 +1,8 @@
-# kills a reunning server program
+# Puppet manifest to kill a process named killmenow using pkill
 
 exec { 'killmenow':
-  command => 'pkill -n killmenow',
-  path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-  onlyif  => "test $(pgrep killmenow|wc -l) -ge 1",
+  command     => 'pkill killmenow',
+  path        => '/usr/bin:/usr/sbin:/bin:/sbin',
+  refreshonly => true,
 }
+
