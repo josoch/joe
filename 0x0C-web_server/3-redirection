@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
+# Configure your Nginx server so that /redirect_me is redirecting
+# to another page.
+sudo apt-get update -y
+sudo apt-get install -y nginx
 
-#Redirect one web url to another
-apt-get -y update
-apt-get -y install nginx
-echo "Holberton School is fun!" > /var/www/html/index.nginx-debian.html
-command="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
-sed -i "s/server_name _;/$command/" /etc/nginx/sites-available/default
-service nginx start
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://twitter.com/ocholijoseph permanent;" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
