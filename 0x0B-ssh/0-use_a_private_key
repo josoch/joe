@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# connects to a remote server using ssh 
-# and a private key at ~/.ssh/school
-
-ssh -i ~/.ssh/school ubuntu@100.25.33.232
